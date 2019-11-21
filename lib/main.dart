@@ -59,15 +59,29 @@ class _TaskTileState extends State<TaskTile> {
     return Row(
       children: <Widget>[
         Text('aaaa'),
-        Checkbox(
-          value: isChecked,
-          onChanged: (newValue) {
-            setState(() {
-              isChecked = newValue;
-            });
-          },
-        ),
+        TaskCheckState(),
       ],
+    );
+  }
+}
+
+class TaskCheckState extends StatefulWidget {
+  @override
+  _TaskCheckStateState createState() => _TaskCheckStateState();
+}
+
+class _TaskCheckStateState extends State<TaskCheckState> {
+  bool isChecked = false;
+
+  @override
+  Widget build(BuildContext context) {
+    return Checkbox(
+      value: isChecked,
+      onChanged: (newValue) {
+        setState(() {
+          isChecked = newValue;
+        });
+      },
     );
   }
 }
