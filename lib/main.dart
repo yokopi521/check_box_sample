@@ -46,14 +46,7 @@ class _MyHomePageState extends State<MyHomePage> {
   }
 }
 
-class TaskTile extends StatefulWidget {
-  @override
-  _TaskTileState createState() => _TaskTileState();
-}
-
-class _TaskTileState extends State<TaskTile> {
-  bool isChecked = false;
-
+class TaskTile extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Row(
